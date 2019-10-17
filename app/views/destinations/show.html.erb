@@ -1,0 +1,11 @@
+<h1><%= @full_location %></h1>
+
+<h2>Top Post: <%= link_to @top_post_title, post_path(@top_post)%></h2>
+<h3>Average blogger age: <%= @age %></h3>
+
+<h3>Five most recent posts:</h3>
+<ul>
+<% @recents.each do |post|%>
+	<li> <%=link_to post.title, post_path(post)%> </li>
+<%end%>
+</ul>

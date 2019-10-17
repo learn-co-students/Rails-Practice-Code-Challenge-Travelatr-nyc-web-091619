@@ -1,0 +1,11 @@
+<h1><%= @title %></h1>
+
+<h2>By <%= link_to @author.name, blogger_path(@author) %></h2>
+<h2>Destination: <%= link_to @destination.full_location, destination_path(@destination) %></h2>
+<h2>Likes: <%= @likes%></h2>
+<br>
+<p> <%= @content%> </p>
+<br>
+<%=form_for @post do |f|%>
+	<%= link_to 'Like', post_like_path(@post) %>
+<%end%>

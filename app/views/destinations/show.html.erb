@@ -1,0 +1,13 @@
+<h1><%= @destination.name %> </h1>
+
+<ol>
+<% @destination.five_most_recent.each do |post| %>
+<li>Post Title: <%= post.title %></li>
+<%end %>
+</ol>
+
+<h2>Average Age of Post Bloggers:</h2> 
+    <%= @destination.average_age_of_bloggers%> 
+    
+
+

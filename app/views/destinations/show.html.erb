@@ -1,0 +1,13 @@
+<h1>Here is your destination page 🛬:</h1><br>
+<h3>Most recent destination posts:</h3>
+<% @destination.latest_5_posts.each do |post|  %>
+    <p><%= link_to post.title , post_path(post) %></p>
+    <p><%= post.content %></p><br><br>
+<% end %>
+<h3>Featured post:</h3>
+<%= link_to @featured_post.title, post_path(@featured_post)%><br><br>
+
+<h3>Average age of destination bloggers:</h3>
+<%= @destination.avg_age%><br><br>
+
+

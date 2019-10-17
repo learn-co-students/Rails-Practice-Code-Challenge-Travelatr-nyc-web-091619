@@ -1,0 +1,7 @@
+<h1>Here is your post page 🎆:</h1>
+<h2>Title: <%= @post.title %></h2>
+<p>Content: <%= @post.content %></p><br><br>
+
+<%= link_to "Post's Author", blogger_path(@post.blogger) %>
+<%= link_to "Post's Destination", destination_path(@post.destination) %>
+<%= button_to "Like  #{@post.likes}❣️", action: "like" %>

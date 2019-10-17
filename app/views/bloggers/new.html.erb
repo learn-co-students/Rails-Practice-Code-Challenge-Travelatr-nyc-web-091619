@@ -1,0 +1,18 @@
+<% if flash[:blogger_errors] %>
+  <ul>
+  <% flash[:blogger_errors].each do |message| %>
+    <li><%= message %></li>
+  <% end%>
+  </ul>
+<% end %>
+
+<h1>Create a new Blogger👨🏻‍💻</h1>
+<%= form_for @blogger do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.submit %>
+<% end %>

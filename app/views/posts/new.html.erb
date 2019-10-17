@@ -1,0 +1,10 @@
+<% if flash[:post_errors] %>
+  <ul>
+  <% flash[:post_errors].each do |message| %>
+    <li><%= message %></li>
+  <% end%>
+  </ul>
+<% end %>
+
+<h1>Create your new Post🎆:</h1>
+<%= render 'form' %>

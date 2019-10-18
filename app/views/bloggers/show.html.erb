@@ -1,0 +1,8 @@
+<h1>Blogger: <%= @blogger.name %></h1>
+
+<p>Total Likes: <%= @blogger.posts.map {|post| post.likes}.sum %></p>
+<p>Top post: <%= @blogger.posts.sort {|a, b| a.likes <=> b.likes}.last %></p>
+<p>Top Destination: <% destinations = @blogger.destinations.map { |i| i.name } %>
+                    <%= destinations.uniq.sort_by {|i| destinations.count(1)}.first %></p>
+
+

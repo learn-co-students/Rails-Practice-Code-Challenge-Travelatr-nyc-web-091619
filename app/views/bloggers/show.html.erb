@@ -1,0 +1,28 @@
+<h1><%= @name %></h1>
+<h3>Age: <%= @age %></h3>
+<h2>Bio</h2>
+<p> <%= @bio %></p>
+
+<h2>Total Likes: <%= @likes %></h2>
+
+<% if @top_post%>
+<h2>Top Post: <%= link_to @top_post_title, post_path(@top_post)%></h2>
+<%else%>
+<h2>Top Post: (No Posts Yet!)</h2>
+<%end%>
+
+
+<h3>Top 5 Destinations</h3>
+<ul>
+<% @top_destinations.each do |destination|%>
+	<li> <%=link_to destination.full_location, destination_path(destination) %></li>
+<%end%>
+</ul>
+
+
+<h4>All Posts</h4>
+<ul>
+<% @posts.each do |post|%>
+	<li> <%=link_to post.title, post_path(post) %></li>
+<%end%>
+</ul>

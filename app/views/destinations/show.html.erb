@@ -1,0 +1,10 @@
+<h1>Show Destination Info: </h1>
+
+<h3>Destination Name: <%= @destination.name %></h3>
+<h4>Destination Country: <%= @destination.country %></h4>
+
+<% sorted_posts = @destination.posts.sort {|p| p.created_at} %>
+
+<% x = sorted_posts.map {|sp| sp.title} %>
+
+<%= x.last(5).map {|post| post} %>

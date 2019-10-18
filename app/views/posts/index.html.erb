@@ -1,0 +1,9 @@
+<h1>Post's Index</h1>
+
+<% @posts.each do |post|%>
+<h3>Post's Title: <%= post.title %></h3>
+<h4>Post's Content: <%= post.content %></h4>
+<h4>Post's Likes: <%= post.likes %></h4>
+
+<% end %>
+

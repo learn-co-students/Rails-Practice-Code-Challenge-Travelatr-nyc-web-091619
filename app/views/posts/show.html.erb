@@ -1,0 +1,10 @@
+<h1>Post's Show Page:</h1>
+
+<h3>Post's Title: <%= @post.title %></h3>
+<h3>Post's Content: <%= @post.content %></h3>
+<h3>Post's Blogger: <%= @post.blogger.name %></h3>
+<h3>Post's Destination: <%= @post.destination.name %></h3>
+
+<h2>By <%= link_to @author.name, blogger_path(@author) %></h2>
+
+

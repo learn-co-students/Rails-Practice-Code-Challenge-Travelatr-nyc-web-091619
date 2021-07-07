@@ -1,0 +1,12 @@
+<h1>destination: <%= @destination.name %></h1>
+
+<h3>Recent posts:</h3>
+<p><% @sorted_d.each do |p|%>
+<%= p.title %> <br>
+<% end%></p>
+
+<h3>Featured post:</h3>
+<%= link_to @sorted_l.first.title, post_path(@sorted_l.first) %>
+
+<h3>Average blogger age:</h3>
+<%= @bloggers_age / @bloggers_count %>
